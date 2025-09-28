@@ -1,0 +1,3 @@
+pytest==8.4.2
+pandas
+python-dotenv==1.0.0

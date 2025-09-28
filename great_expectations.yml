@@ -1,0 +1,6 @@
+# Great Expectations configuration for data quality tests
+# This is a minimal config to enable GE in the project
+# You can expand this with more suites and checkpoints as needed
+
+# To use, run: great_expectations init
+# Or manually add suites and checkpoints

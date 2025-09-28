@@ -8,7 +8,7 @@ def test_data_quality():
         'order_id': [1, 2, 3],
         'product': ['Widget', 'Gadget', 'Widget'],
         'quantity': [10, 5, 3],
-        'price': [2.5, 5.0, 2.5],
+        'price_per_item': [2.5, 5.0, 2.5],
         'order_date': ['2025-09-01', '2025-09-02', '2025-09-03']
     }
     df = pd.DataFrame(data)

@@ -10,10 +10,10 @@ def setup_test_db():
         order_id INTEGER PRIMARY KEY,
         product TEXT,
         quantity INTEGER,
-        price REAL,
+        price_per_item REAL,
         order_date TEXT
     )''')
-    cursor.executemany('INSERT INTO sales (product, quantity, price, order_date) VALUES (?, ?, ?, ?)', [
+    cursor.executemany('INSERT INTO sales (product, quantity, price_per_item, order_date) VALUES (?, ?, ?, ?)', [
         ('Widget', 10, 2.5, '2025-09-01'),
         ('Gadget', 5, 5.0, '2025-09-02'),
         ('Widget', 3, 2.5, '2025-09-03'),

@@ -1,0 +1,163 @@
+<svg viewBox="0 0 1000 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1000" height="800" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="500" y="40" font-family="Arial, sans-serif" font-size="26" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+    Figure 1: Conceptual Framework
+  </text>
+  
+  <!-- Left Section: CI/CD PIPELINE IMPLEMENTATION -->
+  <g id="left-section">
+    <!-- Main container -->
+    <rect x="50" y="80" width="400" height="380" rx="8" fill="#e8f4f8" stroke="#2980b9" stroke-width="2"/>
+    
+    <!-- Section header -->
+    <rect x="50" y="80" width="400" height="50" rx="8" fill="#2980b9"/>
+    <text x="250" y="110" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">
+      CI/CD PIPELINE IMPLEMENTATION
+    </text>
+    
+    <!-- Component 1: Automated Testing -->
+    <rect x="80" y="150" width="340" height="90" rx="6" fill="white" stroke="#3498db" stroke-width="1.5"/>
+    <text x="250" y="175" font-family="Arial, sans-serif" font-size="16" font-weight="600" text-anchor="middle" fill="#2c3e50">
+      Automated Testing
+    </text>
+    <text x="250" y="200" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#34495e">
+      • Unit tests
+    </text>
+    <text x="250" y="220" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#34495e">
+      • Integration tests • Data quality tests
+    </text>
+    
+    <!-- Component 2: Workflow Orchestration -->
+    <rect x="80" y="260" width="340" height="90" rx="6" fill="white" stroke="#3498db" stroke-width="1.5"/>
+    <text x="250" y="285" font-family="Arial, sans-serif" font-size="16" font-weight="600" text-anchor="middle" fill="#2c3e50">
+      Workflow Orchestration
+    </text>
+    <text x="250" y="310" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#34495e">
+      • GitHub Actions
+    </text>
+    <text x="250" y="330" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#34495e">
+      • YAML configuration
+    </text>
+    
+    <!-- Component 3: Environment Containerization -->
+    <rect x="80" y="370" width="340" height="90" rx="6" fill="white" stroke="#3498db" stroke-width="1.5"/>
+    <text x="250" y="395" font-family="Arial, sans-serif" font-size="16" font-weight="600" text-anchor="middle" fill="#2c3e50">
+      Environment Containerization
+    </text>
+    <text x="250" y="420" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#34495e">
+      • Docker
+    </text>
+    <text x="250" y="440" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#34495e">
+      • Multi-stage builds
+    </text>
+  </g>
+  
+  <!-- Right Section: DATA ENGINEERING OUTCOMES -->
+  <g id="right-section">
+    <!-- Main container -->
+    <rect x="550" y="80" width="400" height="380" rx="8" fill="#f0e8f8" stroke="#8e44ad" stroke-width="2"/>
+    
+    <!-- Section header -->
+    <rect x="550" y="80" width="400" height="50" rx="8" fill="#8e44ad"/>
+    <text x="750" y="110" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">
+      DATA ENGINEERING OUTCOMES
+    </text>
+    
+    <!-- Component 1: Code Reliability -->
+    <rect x="580" y="150" width="340" height="90" rx="6" fill="white" stroke="#9b59b6" stroke-width="1.5"/>
+    <text x="750" y="175" font-family="Arial, sans-serif" font-size="16" font-weight="600" text-anchor="middle" fill="#2c3e50">
+      Code Reliability
+    </text>
+    <text x="750" y="200" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#34495e">
+      Measurement: Automated test pass rates
+    </text>
+    <text x="750" y="220" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#34495e">
+      Indicator: 100% test success in case study
+    </text>
+    
+    <!-- Component 2: Workflow Reproducibility -->
+    <rect x="580" y="260" width="340" height="90" rx="6" fill="white" stroke="#9b59b6" stroke-width="1.5"/>
+    <text x="750" y="285" font-family="Arial, sans-serif" font-size="16" font-weight="600" text-anchor="middle" fill="#2c3e50">
+      Workflow Reproducibility
+    </text>
+    <text x="750" y="310" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#34495e">
+      Measurement: Environment consistency
+    </text>
+    <text x="750" y="330" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#34495e">
+      Indicator: Identical Docker artifacts across runs
+    </text>
+    
+    <!-- Component 3: Development Velocity -->
+    <rect x="580" y="370" width="340" height="90" rx="6" fill="white" stroke="#9b59b6" stroke-width="1.5"/>
+    <text x="750" y="395" font-family="Arial, sans-serif" font-size="16" font-weight="600" text-anchor="middle" fill="#2c3e50">
+      Development Velocity
+    </text>
+    <text x="750" y="420" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#34495e">
+      Measurement: Pipeline execution time
+    </text>
+    <text x="750" y="440" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#34495e">
+      Indicator: Consistent build times (~2.3 minutes)
+    </text>
+  </g>
+  
+  <!-- Center Arrows and Labels -->
+  <g id="center-arrows">
+    <!-- First arrow -->
+    <path d="M 480 195 L 520 195" stroke="#34495e" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+    
+    <!-- Second arrow -->
+    <path d="M 480 305 L 520 305" stroke="#34495e" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+    
+    <!-- Third arrow -->
+    <path d="M 480 415 L 520 415" stroke="#34495e" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+    
+    <!-- Arrow labels -->
+    <text x="500" y="185" font-family="Arial, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#34495e" transform="rotate(-10 500 185)">
+      HYPOTHESIZED POSITIVE RELATIONSHIP
+    </text>
+    
+    <text x="500" y="295" font-family="Arial, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#34495e" transform="rotate(-10 500 295)">
+      DIRECT POSITIVE INFLUENCE
+    </text>
+    
+    <text x="500" y="405" font-family="Arial, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#34495e" transform="rotate(-10 500 405)">
+      DIRECT POSITIVE INFLUENCE
+    </text>
+  </g>
+  
+  <!-- Bottom Section: THEORETICAL FOUNDATION -->
+  <g id="bottom-section">
+    <!-- Main container -->
+    <rect x="150" y="510" width="700" height="160" rx="8" fill="#e8f8e8" stroke="#27ae60" stroke-width="2"/>
+    
+    <!-- Section header -->
+    <rect x="150" y="510" width="700" height="40" rx="8" fill="#27ae60"/>
+    <text x="500" y="535" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">
+      THEORETICAL FOUNDATION
+    </text>
+    
+    <!-- Content -->
+    <text x="500" y="575" font-family="Arial, sans-serif" font-size="16" font-weight="600" text-anchor="middle" fill="#2c3e50">
+      Information Processing Theory
+    </text>
+    <text x="500" y="600" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#34495e">
+      • Organizations as information processing systems
+    </text>
+    <text x="500" y="625" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#34495e">
+      • CI/CD as analytical information processing capability
+    </text>
+    <text x="500" y="650" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#34495e">
+      • Fit between information needs and processing capabilities
+    </text>
+  </g>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#34495e"/>
+    </marker>
+  </defs>
+</svg>

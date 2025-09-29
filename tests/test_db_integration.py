@@ -26,5 +26,7 @@ def test_db_etl_integration():
     df = pd.read_sql_query('SELECT * FROM sales', conn)
     transformed = transform_sales_data(df)
     assert not transformed.empty
+    # 'total_sales' should be a single value column
     assert 'total_sales' in transformed.columns
+    assert transformed['total_sales'].iloc[0] == transformed['total_price'].sum()
     conn.close()

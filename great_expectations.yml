@@ -1,6 +1,24 @@
-# Great Expectations configuration for data quality tests
-# This is a minimal config to enable GE in the project
-# You can expand this with more suites and checkpoints as needed
+## Removed deprecated datasources section
+config_version: 3.0
 
-# To use, run: great_expectations init
-# Or manually add suites and checkpoints
+expectations_store_name: expectations_store
+
+stores:
+  expectations_store:
+    class_name: ExpectationsStore
+    store_backend:
+      class_name: TupleFilesystemStoreBackend
+      base_directory: great_expectations/expectations/
+
+  validations_store:
+    class_name: ValidationResultsStore
+    store_backend:
+      class_name: TupleFilesystemStoreBackend
+      base_directory: great_expectations/uncommitted/validations/
+
+
+  checkpoint_store:
+    class_name: CheckpointStore
+    store_backend:
+      class_name: TupleFilesystemStoreBackend
+      base_directory: great_expectations/checkpoints/

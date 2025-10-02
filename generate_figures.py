@@ -51,5 +51,5 @@ ax.text(0.02, 0.98, stats_text, transform=ax.transAxes, fontsize=10,
         verticalalignment='top', bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.8))
 
 plt.tight_layout()
-plt.savefig('pipeline_stage_durations_boxplot.png', dpi=300, bbox_inches='tight')
-plt.show()
+plt.savefig('boxplot_pipeline_durations.png', dpi=300, bbox_inches='tight')
+print("✓ Saved boxplot_pipeline_durations.png at 300 DPI.")

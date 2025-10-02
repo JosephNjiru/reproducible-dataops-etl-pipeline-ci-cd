@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.13]
+        python-version: [3.11]
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -27,21 +27,8 @@ jobs:
         run: pip install --no-cache-dir -r requirements.txt
       - name: Run tests
         run: pytest
-
-  require-tests-for-pr:
-    runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request'
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-      - name: Set up Python 3.13
-        uses: actions/setup-python@v4
-        with:
-          python-version: 3.13
-      - name: Install dependencies
-        run: pip install --no-cache-dir -r requirements.txt
-      - name: Run tests
-        run: pytest
+      - name: Scan dependencies for vulnerabilities
+        run: pip-audit
 
   build:
     runs-on: ubuntu-latest
@@ -56,6 +43,15 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Build Docker image
-        run: docker build -t josephnjiru/dataops-cicd-pipeline-github-actions:latest .
+        run: docker build -t josephnjiru/dataops-cicd-pipeline-github-actions:${{ github.sha }} .
+      - name: Scan Docker image for vulnerabilities
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: 'josephnjiru/dataops-cicd-pipeline-github-actions:${{ github.sha }}'
+          format: 'table'
+          exit-code: '1'
+          ignore-unfixed: true
+          vuln-type: 'os,library'
+          severity: 'CRITICAL,HIGH'
       - name: Push Docker image
-        run: docker push josephnjiru/dataops-cicd-pipeline-github-actions:latest
+        run: docker push josephnjiru/dataops-cicd-pipeline-github-actions:${{ github.sha }}

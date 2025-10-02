@@ -1,0 +1,32 @@
+{
+  "expectations": [
+    {
+      "type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "order_id"
+      }
+    },
+    {
+      "type": "expect_column_values_to_be_greater_than_or_equal_to",
+      "kwargs": {
+        "column": "total_price",
+        "min_value": 0
+      }
+    },
+    {
+      "type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "order_date"
+      }
+    },
+    {
+      "type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "product_id"
+      }
+    }
+  ],
+  "meta": {
+    "great_expectations_version": "0.18.15"
+  }
+}

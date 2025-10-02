@@ -1,3 +1,7 @@
+
+# Project Status
+This project is fully functional. All tests pass successfully in CI/CD and local environments.
+
 # DevOps for Data: A CI/CD Pipeline for an Automated ETL Job
 
 This project implements a complete Continuous Integration and Continuous Deployment (CI/CD) pipeline for a serverless ETL job. Using GitHub Actions, this pipeline automates the testing and packaging of data transformation code, ensuring that every change is validated before it can be deployed.
@@ -76,6 +80,16 @@ The pipeline is orchestrated entirely within GitHub using GitHub Actions:
 - **`requirements.txt`**: Lists all Python dependencies, including great_expectations for data quality
 - **`tests/test_db_integration.py`**: Database integration tests for ETL reproducibility
 - **`tests/test_data_quality.py`**: Data quality validation using Great Expectations
+
+
+## 📊 How to Generate Figures
+To generate the final publication-quality boxplot figure, run:
+
+```bash
+python generate_figures.py
+```
+
+This will save `boxplot_pipeline_durations.png` at 300 DPI in the project root.
 
 ## 🚀 How to Run the Pipeline & Reproduce Results
 

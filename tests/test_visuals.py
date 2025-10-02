@@ -1,3 +1,5 @@
+import matplotlib
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -62,7 +64,7 @@ ax.text(0.02, 0.98, f'Build Stage Stats:\nMean: {avg_build:.1f}s | Std: {std_bui
 plt.tight_layout()
 plt.savefig('pipeline_stage_durations_across_five_workflow_runs.png', 
             dpi=300, bbox_inches='tight', facecolor='white')
-plt.show()
+# plt.show()  # Disabled for headless test environments
 
 # Print summary statistics
 print(f"Average durations across 5 runs:")

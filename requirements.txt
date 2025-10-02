@@ -8,4 +8,5 @@ pandas==2.1.4
 python-dotenv==1.0.0
 great-expectations==1.6.4
 matplotlib==3.10.6
-pip-audit==2.7.2
+pip>=23.2
+setuptools>=65.5.1

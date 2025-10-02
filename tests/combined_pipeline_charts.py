@@ -25,7 +25,7 @@ bars3 = ax.bar(x + width, push, width, label='Push', color='red', alpha=0.7)
 # Add labels and styling
 ax.set_xlabel('Workflow Run')
 ax.set_ylabel('Duration (seconds)')
-ax.set_title('CI/CD Pipeline Stage Durations Across Five Workflow Runs\n(Average Build Time: 2.4 minutes)', fontweight='bold')
+ax.set_title('CI/CD pipeline stage durations across five workflow runs\n(Average build time: 2.4 minutes)', fontweight='bold')
 ax.set_xticks(x)
 ax.set_xticklabels(runs)
 ax.legend()

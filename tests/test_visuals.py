@@ -41,7 +41,7 @@ add_value_labels(bars3)
 # Customize the chart
 ax.set_xlabel('Workflow Run', fontsize=12, fontweight='bold')
 ax.set_ylabel('Duration (seconds)', fontsize=12, fontweight='bold')
-ax.set_title('CI/CD Pipeline Stage Durations Across Five Workflow Runs\n(Average Build Time: ~2.3 minutes)', 
+ax.set_title('CI/CD pipeline stage durations across five workflow runs\n(Average build time: ~2.3 minutes)', 
              fontsize=14, fontweight='bold', pad=20)
 ax.set_xticks(x)
 ax.set_xticklabels(runs)

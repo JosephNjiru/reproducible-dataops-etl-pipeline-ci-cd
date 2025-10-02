@@ -38,7 +38,7 @@ for i, d in enumerate(data):
     ax.scatter(x, d, alpha=0.6, color='navy', s=30)
 
 ax.set_ylabel('Duration (seconds)', fontsize=12, fontweight='bold')
-ax.set_title('Distribution of Pipeline Stage Durations Across 20 Runs', 
+ax.set_title('Distribution of pipeline stage durations across 20 runs', 
              fontsize=14, fontweight='bold', pad=20)
 ax.grid(True, alpha=0.3)
 

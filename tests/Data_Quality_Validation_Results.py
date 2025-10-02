@@ -22,7 +22,7 @@ fig, ax = plt.subplots(figsize=(10, 6))
 
 bars = ax.barh(constraints, passed, color=colors, alpha=0.8)
 ax.set_xlabel('Validation Pass Rate (%)', fontsize=12, fontweight='bold')
-ax.set_title('Data Quality Validation Results\n(Great Expectations Framework)', 
+ax.set_title('Data quality validation results\n(Pandera framework)', 
              fontsize=14, fontweight='bold', pad=20)
 ax.set_xlim(0, 105)
 

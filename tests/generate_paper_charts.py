@@ -2,7 +2,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-# Set professional academic style
 plt.style.use('seaborn-v0_8-whitegrid')
 plt.rcParams['font.family'] = 'serif'
 plt.rcParams['font.size'] = 11
@@ -11,7 +10,7 @@ def create_pipeline_durations_chart():
     """Create the main pipeline durations chart"""
     fig, ax = plt.subplots(figsize=(10, 6))
     
-    # Your exact data
+    # exact data
     runs = ['Run 1', 'Run 2', 'Run 3', 'Run 4', 'Run 5']
     test_durations = [38, 36, 39, 37, 38]
     build_durations = [142, 138, 145, 140, 143] 
@@ -35,7 +34,7 @@ def create_pipeline_durations_chart():
     # Customize chart
     ax.set_xlabel('Workflow Run', fontweight='bold')
     ax.set_ylabel('Duration (seconds)', fontweight='bold')
-    ax.set_title('CI/CD Pipeline Stage Durations Across Five Workflow Runs\n(Average Build Time: 2.4 minutes)', 
+    ax.set_title('CI/CD pipeline stage durations across five workflow runs\n(Average build time: 2.4 minutes)', 
                  fontweight='bold', fontsize=14)
     ax.set_xticks(x)
     ax.set_xticklabels(runs)
@@ -70,7 +69,7 @@ def create_data_quality_chart():
     
     bars = ax.barh(constraints, passed, color=colors, alpha=0.8)
     ax.set_xlabel('Validation Pass Rate (%)', fontweight='bold')
-    ax.set_title('Data Quality Validation Results\n(Great Expectations Framework)', 
+    ax.set_title('Data quality validation results\n(Pandera framework)', 
                  fontweight='bold', fontsize=14)
     ax.set_xlim(0, 105)
     
@@ -111,7 +110,7 @@ def create_duration_boxplot():
         ax.scatter(x, d, alpha=0.6, color='navy', s=30)
     
     ax.set_ylabel('Duration (seconds)', fontweight='bold')
-    ax.set_title('Distribution of Pipeline Stage Durations Across 20 Runs', 
+    ax.set_title('Distribution of pipeline stage durations across 20 runs', 
                  fontweight='bold', fontsize=14)
     ax.grid(True, alpha=0.3)
     

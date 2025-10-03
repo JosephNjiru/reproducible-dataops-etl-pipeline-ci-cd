@@ -74,4 +74,5 @@ htmlcov/
 !requirements.txt
 !README.md
 !LICENSE
+!SECURITY.md
 !production_readiness_report.md

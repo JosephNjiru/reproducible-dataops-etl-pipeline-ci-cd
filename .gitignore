@@ -87,4 +87,4 @@ docker-compose.override.yml
 !README.md
 !LICENSE
 !SECURITY.md
-!production_readiness_report.md
+!production_readiness_report.mdarchive/

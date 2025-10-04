@@ -61,11 +61,11 @@ The following secrets must be set in GitHub repository settings:
 
    **Secret 1:**
    - Name: `DOCKERHUB_USERNAME`
-   - Value: `josephnjiru`
+   - Value: `[Your Docker Hub username]`
 
    **Secret 2:**
    - Name: `DOCKERHUB_TOKEN`
-   - Value: `dckr_pat_u4TWX02McQJP3oyRYrR-UtmXFLY`
+   - Value: `[Your Docker Hub access token - obtain from Docker Hub, NEVER commit to repo]`
 
 ## CI/CD Workflow Verification
 

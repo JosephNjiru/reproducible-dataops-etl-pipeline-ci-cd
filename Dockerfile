@@ -17,6 +17,9 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
+# Remove vulnerable setuptools from base image before copying upgraded version
+RUN pip uninstall -y setuptools
+
 RUN useradd -m appuser
 # Copy Python packages including upgraded pip and setuptools from builder
 COPY --from=builder /usr/local/lib/python3.11/site-packages /usr/local/lib/python3.11/site-packages

@@ -68,6 +68,15 @@ htmlcov/
 # Generated files from ETL pipeline
 transformed_sales_data.csv
 
+# Secrets and sensitive files (NEVER commit these)
+*secret*
+*token*
+*password*
+*.env.local
+*.env.production
+.dockercfg
+docker-compose.override.yml
+
 # Keep these files
 !.github/
 !src/

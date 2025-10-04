@@ -16,13 +16,13 @@ Click this link: https://github.com/JosephNjiru/reproducible-dataops-etl-pipelin
 #### Secret #1: DOCKERHUB_USERNAME
 - Click "New repository secret" (or "Update" if it exists)
 - Name: `DOCKERHUB_USERNAME`
-- Value: `josephnjiru`
+- Value: `[Your Docker Hub username]`
 - Click "Add secret" or "Update secret"
 
 #### Secret #2: DOCKERHUB_TOKEN
 - Click "New repository secret" (or "Update" if it exists)  
 - Name: `DOCKERHUB_TOKEN`
-- Value: `dckr_pat_u4TWX02McQJP3oyRYrR-UtmXFLY`
+- Value: `[Your Docker Hub access token from Docker Hub - NEVER commit this]`
 - Click "Add secret" or "Update secret"
 
 ### Step 3: Verify the Fix

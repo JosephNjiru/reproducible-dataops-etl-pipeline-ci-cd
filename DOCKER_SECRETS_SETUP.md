@@ -11,13 +11,13 @@ The CI/CD workflow requires two GitHub repository secrets to authenticate with D
 
 ## Current Configuration
 
-Based on the latest access token information provided:
+**IMPORTANT:** The Docker Hub access token should NEVER be committed to the repository. It must be configured as a GitHub Secret.
 
-- **Username**: `josephnjiru`
-- **Access Token**: `dckr_pat_u4TWX02McQJP3oyRYrR-UtmXFLY`
+- **Username**: Configure as GitHub secret `DOCKERHUB_USERNAME`
+- **Access Token**: Configure as GitHub secret `DOCKERHUB_TOKEN` 
 - **Token Description**: reproducible-dataops-etl-pipeline-ci-cd
 - **Permissions**: Read, Write, Delete
-- **Expiration**: Never
+- **Expiration**: As configured in Docker Hub
 
 ## How to Set Up Secrets
 
@@ -26,10 +26,10 @@ Based on the latest access token information provided:
 3. Add or update the following secrets:
 
    - **Name**: `DOCKERHUB_USERNAME`  
-     **Value**: `josephnjiru`
+     **Value**: `[Your Docker Hub username]`
 
    - **Name**: `DOCKERHUB_TOKEN`  
-     **Value**: `dckr_pat_u4TWX02McQJP3oyRYrR-UtmXFLY`
+     **Value**: `[Your Docker Hub access token - NEVER commit this to the repository]`
 
 ## Verifying the Setup
 

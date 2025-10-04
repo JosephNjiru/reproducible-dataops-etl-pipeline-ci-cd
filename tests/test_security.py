@@ -12,7 +12,7 @@ def test_minimum_package_versions():
     # Define minimum secure versions for critical packages
     min_versions = {
         'pip': '25.2',
-        'setuptools': '80.9.0',
+        'setuptools': '78.1.1',  # Fixes CVE-2024-6345 and CVE-2025-47273
         'requests': '2.32.5',
         'urllib3': '2.2.2',
         'jinja2': '3.1.6',

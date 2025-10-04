@@ -9,7 +9,7 @@ RUN pip install --no-cache-dir --upgrade pip setuptools>=80.9.0 && \
     pip install --no-cache-dir -r requirements.txt
 
 # Final stage
-FROM python:3.11.0-slim-bookworm
+FROM python:3.11.0-slim
 WORKDIR /app
 
 # Update system packages to fix CVE-2025-32988, CVE-2025-32990, CVE-2025-6020

@@ -1,7 +1,7 @@
 
 # DataOps CI/CD Pipeline: Automated ETL with GitHub Actions
 
-[![CI/CD Pipeline](https://github.com/JosephNjiru/dataops-cicd-pipeline-github-actions/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/JosephNjiru/dataops-cicd-pipeline-github-actions/actions/workflows/ci-cd.yml)
+[![CI/CD Pipeline](https://github.com/JosephNjiru/reproducible-dataops-etl-pipeline-ci-cd/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/JosephNjiru/reproducible-dataops-etl-pipeline-ci-cd/actions/workflows/ci-cd.yml)
 [![Python Version](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=flat&logo=docker&logoColor=white)](https://docker.com)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -72,7 +72,7 @@ graph LR
 ## 📁 Project Structure
 
 ```
-dataops-cicd-pipeline-github-actions/
+reproducible-dataops-etl-pipeline-ci-cd/
 ├── .github/
 │   └── workflows/
 │       └── ci-cd.yml              # 🚀 CI/CD pipeline configuration
@@ -102,8 +102,8 @@ dataops-cicd-pipeline-github-actions/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/JosephNjiru/dataops-cicd-pipeline-github-actions.git
-   cd dataops-cicd-pipeline-github-actions
+   git clone https://github.com/JosephNjiru/reproducible-dataops-etl-pipeline-ci-cd.git
+   cd reproducible-dataops-etl-pipeline-ci-cd
    ```
 
 2. **Set up virtual environment**

@@ -38,10 +38,10 @@ The `.github/workflows/ci-cd.yml` file correctly uses:
 **Required GitHub Secrets:**
 The following secrets must be set in GitHub repository settings:
 
-| Secret Name | Required Value |
-|-------------|---------------|
-| `DOCKERHUB_USERNAME` | `josephnjiru` |
-| `DOCKERHUB_TOKEN` | `dckr_pat_u4TWX02McQJP3oyRYrR-UtmXFLY` |
+| Secret Name | Description |
+|-------------|-------------|
+| `DOCKERHUB_USERNAME` | Your Docker Hub username |
+| `DOCKERHUB_TOKEN` | Your Docker Hub access token (NEVER commit to repository) |
 
 ### 3. ✅ Documentation Created
 
@@ -61,11 +61,11 @@ The following secrets must be set in GitHub repository settings:
 
    **Secret 1:**
    - Name: `DOCKERHUB_USERNAME`
-   - Value: `josephnjiru`
+   - Value: `[Your Docker Hub username]`
 
    **Secret 2:**
    - Name: `DOCKERHUB_TOKEN`
-   - Value: `dckr_pat_u4TWX02McQJP3oyRYrR-UtmXFLY`
+   - Value: `[Your Docker Hub access token - obtain from Docker Hub, NEVER commit to repo]`
 
 ## CI/CD Workflow Verification
 
@@ -106,8 +106,8 @@ Once the GitHub secrets are properly configured:
 
 1. **Set GitHub Secrets** (Manual step required):
    - Go to repository settings → Secrets and variables → Actions
-   - Add/update `DOCKERHUB_USERNAME` = `josephnjiru`
-   - Add/update `DOCKERHUB_TOKEN` = `dckr_pat_u4TWX02McQJP3oyRYrR-UtmXFLY`
+   - Add/update `DOCKERHUB_USERNAME` with your Docker Hub username
+   - Add/update `DOCKERHUB_TOKEN` with your Docker Hub access token (obtain from Docker Hub)
 
 2. **Verify the Fix**:
    - Push a commit to the main branch

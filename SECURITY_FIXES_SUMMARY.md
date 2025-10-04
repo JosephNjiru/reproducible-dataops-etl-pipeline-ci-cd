@@ -44,7 +44,7 @@
 
 #### Python Package Vulnerabilities Fixed:
 - Updated setuptools requirement to `>=80.9.0` (was 65.5.1 in base image)
-- Added explicit `pip install --upgrade pip setuptools>=78.1.1` in Dockerfile
+- Added explicit `pip install --upgrade pip setuptools>=78.1.2` in Dockerfile
 - This fixes:
   - CVE-2024-6345: Remote code execution in setuptools package_index module
   - CVE-2025-47273: Path traversal vulnerability in setuptools PackageIndex

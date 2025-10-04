@@ -1,14 +1,14 @@
 # Builder stage
-FROM python:3.11.0-slim AS builder
+FROM python:3.11-slim AS builder
 WORKDIR /app
 COPY requirements.txt .
 
 # Update pip and setuptools to latest versions to fix CVE-2024-6345 and CVE-2025-47273
-RUN pip install --no-cache-dir --upgrade pip setuptools>=80.9.0 && \
+RUN pip install --no-cache-dir --upgrade pip setuptools==80.9.0 && \
     pip install --no-cache-dir -r requirements.txt
 
 # Final stage
-FROM python:3.11.0-slim
+FROM python:3.11-slim
 WORKDIR /app
 
 # Update system packages to fix CVE-2025-32988, CVE-2025-32990, CVE-2025-6020

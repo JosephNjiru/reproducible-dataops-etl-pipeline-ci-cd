@@ -4,7 +4,7 @@ WORKDIR /app
 COPY requirements.txt .
 
 # Update pip and setuptools to latest versions to fix CVE-2024-6345 and CVE-2025-47273
-RUN pip install --no-cache-dir --upgrade pip setuptools>=80.9.0 && \
+RUN pip install --no-cache-dir --upgrade pip setuptools==80.9.0 && \
     pip install --no-cache-dir -r requirements.txt
 
 # Final stage

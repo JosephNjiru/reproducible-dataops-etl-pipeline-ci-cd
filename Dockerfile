@@ -1,6 +1,5 @@
-# Use an official Python runtime as a parent image
 # Builder stage
-FROM python:3.11.0-slim-bookworm AS builder
+FROM python:3.11.0-slim AS builder          # <-- use "python:3.11.0-slim" not "python:3.11.0-slim-bookworm"
 WORKDIR /app
 COPY requirements.txt .
 

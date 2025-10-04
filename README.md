@@ -5,10 +5,22 @@
 [![Python Version](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=flat&logo=docker&logoColor=white)](https://docker.com)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Security](https://img.shields.io/badge/security-hardened-brightgreen.svg)](SECURITY.md)
 
-> **Project Status**: ✅ Fully functional. All tests pass in CI/CD and local environments.
+> **Project Status**: ✅ Fully functional and security-hardened. All tests pass in CI/CD and local environments.
 
-This project demonstrates the application of DevOps principles to data engineering through a complete Continuous Integration and Continuous Deployment (CI/CD) pipeline for a serverless ETL job. Leveraging GitHub Actions, it automates testing, validation, and packaging of data transformation code, ensuring robust and reliable data pipelines.
+This project demonstrates the application of DevOps principles to data engineering through a complete Continuous Integration and Continuous Deployment (CI/CD) pipeline for a serverless ETL job. Leveraging GitHub Actions, it automates testing, validation, security scanning, and packaging of data transformation code, ensuring robust and reliable data pipelines.
+
+## 🔒 Security First
+
+**All fixable security vulnerabilities have been resolved!** This project maintains:
+- ✅ Automated dependency vulnerability scanning with `pip-audit`
+- ✅ Up-to-date secure versions of all packages
+- ✅ Multi-stage Docker builds for minimal attack surface
+- ✅ Non-root container execution
+- ✅ Comprehensive security testing
+
+See [SECURITY.md](SECURITY.md) for detailed security posture and policy.
 
 ## 🎯 Business Value & Impact
 
@@ -20,6 +32,7 @@ Traditional data engineering workflows often lack automated quality gates, leadi
 - ✅ **Reproducible environments** via containerization
 - ✅ **Rapid iteration** with automated CI/CD workflows
 - ✅ **Production-ready artifacts** delivered via Docker images
+- ✅ **Security-hardened** with automated vulnerability scanning and patching
 
 ## 🏗️ Architecture Overview
 
@@ -39,8 +52,9 @@ graph LR
 **Pipeline Flow:**
 1. **Code Push** → Triggers automated workflow
 2. **Quality Gates** → Comprehensive test suite execution
-3. **Artifact Creation** → Docker image build and tagging
-4. **Deployment Ready** → Immutable container available for deployment
+3. **Security Scan** → Automated vulnerability detection with pip-audit
+4. **Artifact Creation** → Docker image build and tagging
+5. **Deployment Ready** → Immutable container available for deployment
 
 ## 🛠️ Technology Stack
 
@@ -53,6 +67,7 @@ graph LR
 | 📦 **Containerization** | Docker | Environment reproducibility |
 | 🗄️ **Integration Testing** | SQLite | Database testing and validation |
 | 📈 **Visualization** | Matplotlib | Pipeline metrics and reporting |
+| 🔒 **Security** | pip-audit | Automated dependency vulnerability scanning |
 
 ## 📁 Project Structure
 

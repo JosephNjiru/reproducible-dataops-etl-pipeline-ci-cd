@@ -13,11 +13,12 @@ This has been **removed from the code**, but the token itself is still active an
 - Updated .gitignore to prevent future secret leaks
 - All references now use GitHub Secrets placeholders
 
-### 2. Fixed Docker Image Security Vulnerabilities
+### 2. Fixed Docker Image Security Vulnerabilities ✅
 - Updated base image from Debian 11 to Debian 12 (bookworm)
 - Fixed 6 OS vulnerabilities (CVE-2025-32988, CVE-2025-32990, CVE-2025-6020)
 - Fixed 2 Python vulnerabilities (CVE-2024-6345, CVE-2025-47273)
-- Updated setuptools to >=80.9.0
+- **FIXED**: Updated setuptools to >=80.9.0 with proper binary installation in Docker image
+- **FIXED**: Added binary copy step in Dockerfile to ensure upgraded packages are present in final image
 
 ### 3. All Tests Passing
 - 11/11 tests passing

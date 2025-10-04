@@ -11,7 +11,7 @@
 ## Fix Applied
 ```dockerfile
 # Changed in Dockerfile:
-1. Line 8: setuptools>=78.1.1 → setuptools>=80.9.0
+1. Line 8: setuptools>=78.1.2 → setuptools>=80.9.0
 2. Line 24: Added COPY --from=builder /usr/local/bin /usr/local/bin
 ```
 

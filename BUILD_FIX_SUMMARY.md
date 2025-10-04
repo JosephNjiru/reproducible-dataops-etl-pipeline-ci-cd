@@ -30,7 +30,7 @@ Examine, audit, and fix all problems in the build process to ensure the project 
 **Problem**: 
 - Trivy vulnerability scanner found 2 HIGH severity CVEs in setuptools package
 - setuptools version 65.5.1 was installed (vulnerable version)
-- Required: setuptools >= 78.1.1 (CVE-2025-47273) or >= 70.0.0 (CVE-2024-6345)
+- Required: setuptools >= 78.1.2 (CVE-2025-47273) or >= 70.0.0 (CVE-2024-6345)
 - Best practice: setuptools >= 80.9.0 (as specified in requirements.txt)
 
 **CVEs Detected**:
@@ -38,7 +38,7 @@ Examine, audit, and fix all problems in the build process to ensure the project 
 2. **CVE-2025-47273**: Path Traversal Vulnerability in PackageIndex
 
 **Root Cause**:
-- Dockerfile upgraded setuptools in builder stage: `pip install --upgrade pip setuptools>=78.1.1`
+- Dockerfile upgraded setuptools in builder stage: `pip install --upgrade pip setuptools>=78.1.2`
 - Only copied site-packages to final image: `COPY --from=builder /usr/local/lib/python3.11/site-packages`
 - **Missing**: The upgraded pip/setuptools binaries in `/usr/local/bin` were not copied
 - Result: Final image still had old setuptools version from base image
@@ -51,7 +51,7 @@ Examine, audit, and fix all problems in the build process to ensure the project 
 **Changes Made**:
 ```dockerfile
 # BEFORE (Line 8)
-RUN pip install --no-cache-dir --upgrade pip setuptools>=78.1.1 && \
+RUN pip install --no-cache-dir --upgrade pip setuptools>=78.1.2 && \
     pip install --no-cache-dir -r requirements.txt
 
 # AFTER (Line 8)

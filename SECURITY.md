@@ -25,7 +25,7 @@ The following vulnerabilities are temporarily ignored in our CI/CD pipeline with
 - ✅ **certifi**: Upgraded from 2023.11.17 → 2025.8.3 (Fixed 1 CVE)
 - ✅ **cryptography**: Upgraded from 41.0.7 → 46.0.2 (Fixed 4 CVEs)
 - ✅ **idna**: Upgraded from 3.6 → 3.10 (Fixed 1 CVE)
-- ✅ **configobj**: Upgraded from 5.0.8 → 5.0.9 (Fixed 1 CVE)
+- ✅ **configobj**: Upgraded from 5.0.8 → 5.0.9 (Fixed GHSA-c33w-24p9-8m24) - Now pinned in requirements.txt
 
 ### Security Best Practices
 
@@ -46,5 +46,5 @@ If you discover a security vulnerability in this project, please email the maint
 
 ---
 
-**Last Updated**: 2025-01-20  
+**Last Updated**: 2025-10-04  
 **Next Review**: When pip 25.3 is released

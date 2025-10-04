@@ -33,7 +33,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     needs: test
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.event_name == 'push' || github.event_name == 'pull_request'
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -53,6 +53,16 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
           load: true
+      - name: Verify setuptools version in Docker image
+        run: |
+          echo "Verifying setuptools version is 80.9.0..."
+          SETUPTOOLS_VERSION=$(docker run --rm josephnjiru/reproducible-dataops-etl-pipeline-ci-cd:${{ github.sha }} python -c "import setuptools; print(setuptools.__version__)")
+          echo "Installed setuptools version: $SETUPTOOLS_VERSION"
+          if [ "$SETUPTOOLS_VERSION" != "80.9.0" ]; then
+            echo "ERROR: Expected setuptools 80.9.0 but found $SETUPTOOLS_VERSION"
+            exit 1
+          fi
+          echo "✅ setuptools version verified successfully"
       - name: Scan Docker image for vulnerabilities
         uses: aquasecurity/trivy-action@0.32.0
         with:
@@ -63,4 +73,5 @@ jobs:
           vuln-type: 'os,library'
           severity: 'CRITICAL,HIGH'
       - name: Push Docker image
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: docker push josephnjiru/reproducible-dataops-etl-pipeline-ci-cd:${{ github.sha }}

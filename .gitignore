@@ -65,6 +65,9 @@ htmlcov/
 # *.json
 # *.pkl
 
+# Generated files from ETL pipeline
+transformed_sales_data.csv
+
 # Keep these files
 !.github/
 !src/

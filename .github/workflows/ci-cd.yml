@@ -53,6 +53,22 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
           load: true
+          # Force rebuild by disabling inline cache to prevent stale setuptools metadata
+          build-args: |
+            BUILDKIT_INLINE_CACHE=0
+      - name: Verify setuptools version
+        run: |
+          echo "Verifying setuptools version in Docker image..."
+          SETUPTOOLS_VERSION=$(docker run --rm josephnjiru/reproducible-dataops-etl-pipeline-ci-cd:${{ github.sha }} pip show setuptools | grep "^Version:" | awk '{print $2}')
+          echo "Installed setuptools version: $SETUPTOOLS_VERSION"
+          if [ "$SETUPTOOLS_VERSION" != "80.9.0" ]; then
+            echo "ERROR: Expected setuptools 80.9.0 but found $SETUPTOOLS_VERSION"
+            exit 1
+          fi
+          echo "✅ setuptools version verified successfully"
+          # Also list all setuptools installations to check for duplicates
+          echo "Checking for multiple setuptools installations..."
+          docker run --rm josephnjiru/reproducible-dataops-etl-pipeline-ci-cd:${{ github.sha }} find /usr/local/lib/python3.11/site-packages -name "setuptools*.dist-info" -type d
       - name: Scan Docker image for vulnerabilities
         uses: aquasecurity/trivy-action@0.32.0
         with:
